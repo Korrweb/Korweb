@@ -1,8 +1,38 @@
-<footer class="flex justify-between py-2.5 px-8 shadow items-center border-t">
-  <p>Copyright &copy; 2025 - Korweb</p>
-  <ul class="flex gap-x-2">
-    <li><a><i class="fa-brands fa-linkedin"></i></a></li>
-    <li><a><i class="fa-brands fa-instagram"></i></a></li>
-    <li><a><i class="fa-brands fa-facebook"></i></a></li>
-  </ul>
+---
+import Logo from "./Logo.astro";
+const yearNow = new Date(Date.now());
+---
+<footer class="border-t bg-gray-200">
+  <div class="container mx-auto">
+    <div class="flex justify-between py-4 items-center">
+      <Logo/>
+      <div class="flex gap-x-14">
+        <ul class="">
+          <li class="font-bold mb-2">KORWEB</li>
+          <li class="pl-1">86600 FREJUS</li>
+        </ul>
+        <ul>
+          <li class="font-bold mb-2">AGENCE WEB</li>
+          <li class="pl-1 hover:underline hover:text-gray-500"><a href="/">Site Internet</a></li>
+          <li class="pl-1 hover:underline hover:text-gray-500"><a href="/">Wordpress</a></li>
+          <li class="pl-1 hover:underline hover:text-gray-500"><a href="/">Application mobile</a></li>
+          <li class="pl-1 hover:underline hover:text-gray-500"><a href="/">Site sur mesure</a></li>
+        </ul>
+        <ul>
+          <li class="font-bold mb-2">INFORMATIONS</li>
+          <li class="pl-1 hover:underline hover:text-gray-500"><a href="/">Contact & accès</a></li>
+          <li class="pl-1 hover:underline hover:text-gray-500"><a href="/">Mentions légales</a></li>
+          <li class="pl-1 hover:underline hover:text-gray-500"><a href="/">Politique de confidentialité</a></li>
+        </ul>
+      </div>
+      <div class="flex justify-between">
+        <ul class="flex gap-x-3">
+          <li><a href="/" target="_blank"><i class="fa-brands fa-facebook hover:text-gray-600 text-2xl"></i></a></li>
+          <li><a href="/" target="_blank"><i class="fa-brands fa-linkedin hover:text-gray-600 text-2xl"></i></a></li>
+          <li><a href="/" target="_blank"><i class="fa-brands fa-square-instagram hover:text-gray-600 text-2xl"></i></a></li>
+          <li><a href="/" target="_blank"><i class="fa-brands fa-twitter hover:text-gray-600 text-2xl"></i></a></li>
+        </ul>
+      </div>
+    </div>
+  </div>
 </footer>
