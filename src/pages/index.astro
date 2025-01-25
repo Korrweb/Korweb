@@ -1,14 +1,27 @@
 ---
-import Welcome from '../components/Welcome.astro';
 import Layout from '../layouts/Layout.astro';
-import Hero from "../components/homepage/Hero.astro";
-
-// Welcome to Astro! Wondering what to do next? Check out the Astro documentation at https://docs.astro.build
-// Don't want to use any of this? Delete everything in this file, the `assets`, `components`, and `layouts` directories, and start fresh.
+import { Image } from 'astro:assets';
+import hero from '../images/hero.jpg';
 ---
 
 <Layout>
-<Hero />
+  <div class="hero bg-gray-50 min-h-screen">
+    <!--TODO: fix image qui dépasse en mode mobile-->
+    <div class="container mx-auto flex justify-center items-center gap-x-52">
+      <div>
+        <h1 class="text-5xl font-bold text-center mb-2">Korweb</h1>
+        <p class="text-xl text-center">Agence Digital Web</p>
+        <!--TODO: revoir le texte-->
+        <p class="py-6 text-center">
+          Créons ensemble votre succès digital
+        </p>
+        <div class="text-center">
+          <a href="/contact" class="btn btn-primary">Contactez-nous</a>
+        </div>
+      </div>
+      <Image src={hero} alt="hero" class="max-w-sm rounded-lg shadow-2xl"/>
+    </div>
+  </div>
   <div class="">
     <div class="">
       <h2>KORWEB, L'AGENCE DIGITAL qui fait la référence</h2>
