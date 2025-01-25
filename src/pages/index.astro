@@ -2,213 +2,124 @@
 import Layout from '../layouts/Layout.astro';
 import { Image } from 'astro:assets';
 import hero from '../images/hero.jpg';
+import marketing from '../images/marketing.jpg';
+import design from '../images/design.jpg';
+import dev from '../images/dev.jpg';
+import seo from '../images/seo.jpg';
+
+import {projectData} from '../data/ProjectData';
+import CardProject from "../components/CardProject.astro";
+
+
 ---
 
 <Layout>
-  <div class="hero bg-gray-50 min-h-screen">
-    <!--TODO: fix image qui dépasse en mode mobile-->
-    <div class="container mx-auto flex justify-center items-center gap-x-52">
-      <div>
-        <h1 class="text-5xl font-bold text-center mb-2">Korweb</h1>
-        <p class="text-xl text-center">Agence Digital Web</p>
-        <!--TODO: revoir le texte-->
-        <p class="py-6 text-center">
-          Créons ensemble votre succès digital
-        </p>
-        <div class="text-center">
-          <a href="/contact" class="btn btn-primary">Contactez-nous</a>
+  <!--<div class="hero bg-gray-50 min-h-screen">-->
+  <!--  &lt;!&ndash;TODO: fix image qui dépasse en mode mobile&ndash;&gt;-->
+  <!--  <div class="container mx-auto flex flex-col md:flex-row justify-center items-center gap-x-52 ">-->
+  <!--    <div>-->
+  <!--      <h2 class="text-5xl font-bold text-center mb-2">Korweb</h1>-->
+  <!--      <p class="text-xl text-center">Agence Digital Web</p>-->
+  <!--      &lt;!&ndash;TODO: revoir le texte&ndash;&gt;-->
+  <!--      <p class="py-6 text-center">-->
+  <!--        Créons ensemble votre succès digital-->
+  <!--      </p>-->
+  <!--      <div class="text-center">-->
+  <!--        <a href="/contact" class="btn btn-primary">Contactez-nous</a>-->
+  <!--      </div>-->
+  <!--    </div>-->
+  <!--    <Image src={hero} alt="hero" class="rounded-lg shadow-2xl w-32"/>-->
+  <!--  </div>-->
+  <!--</div>-->
+
+  <div class="container mx-auto flex justify-between my-52 items-center">
+    <div class="flex-1 text-center">
+      <h1 class="text-2xl mb-2">Agence Web <strong class="font-bold text-blue-500">Korweb</strong></h1>
+        <h2 class="italic">Experts en Solutions Web</h2>
+    </div>
+    <div class="flex-1 text-justify space-y-3">
+      <p>Implantée à <strong>Fréjus</strong> dans le Var (PACA), l'agence <strong>Korweb</strong> conçoit des solutions web personnalisées pour développer votre présence en ligne et optimiser vos processus métier.</p>
+      <p>Notre expertise s'étend de la création de <strong>sites vitrines professionnels</strong>, <strong>solution e-commerce</strong>, au développement de <strong>logiciel sur mesure</strong> afin de répondre au <strong>besoin spécifique</strong> de votre entreprise</p>
+      <p>Chaque projet bénéficie d'un <strong>accompagnement personnalisé</strong>, depuis la conception jusqu'à la mise en ligne, avec un engagement constant sur la <strong>qualité</strong> et le <strong>professionnalisme</strong>.</p>
+    </div>
+  </div>
+
+  <!--todo: add link-->
+  <div class="grid grid-cols-4 gap-6 container mx-auto">
+    <div class="card bg-base-100 w-86 shadow-md hover:shadow-xl">
+      <figure>
+        <Image src={marketing} alt="marketing" />
+      </figure>
+      <div class="card-body">
+        <h2 class="card-title mx-auto">Marketing Digital</h2>
+        <p>Stratégie de communication digitale personnalisée : analyse de marché, identité visuelle et plan d'action pour accroître votre visibilité en ligne.</p>
+        <div class="card-actions justify-end">
+          <a class="btn btn-primary">En Savoir Plus</a>
         </div>
       </div>
-      <Image src={hero} alt="hero" class="max-w-sm rounded-lg shadow-2xl"/>
+    </div>
+      <!--TODO: add link-->
+    <div class="card bg-base-100 w-86 shadow-md hover:shadow-xl">
+      <figure>
+        <Image src={design} alt="marketing" />
+      </figure>
+      <div class="card-body">
+        <h2 class="card-title mx-auto">Design</h2>
+        <p>Création d'identité visuelle unique : logo, charte graphique et supports de communication cohérents pour renforcer votre image de marque.</p>
+        <div class="card-actions justify-end">
+          <a class="btn btn-primary" href="/">En Savoir Plus</a>
+        </div>
+      </div>
+    </div>
+    <!--todo: add link-->
+    <div class="card bg-base-100 w-86 shadow-md hover:shadow-xl">
+      <figure>
+        <Image src={dev} alt="marketing" />
+      </figure>
+      <div class="card-body">
+        <h2 class="card-title mx-auto">Développement Web</h2>
+        <p>Solutions web sur-mesure : sites vitrines, e-commerce et applications adaptés à vos objectifs avec une gestion de projet maîtrisée.</p>
+        <div class="card-actions justify-end">
+          <a class="btn btn-primary" href="/">En Savoir Plus</a>
+        </div>
+      </div>
+    </div>
+    <!--todo: add link-->
+    <div class="card bg-base-100 w-86 shadow-md hover:shadow-xl">
+      <figure>
+        <Image src={seo} alt="marketing" />
+      </figure>
+      <div class="card-body">
+        <h2 class="card-title mx-auto">Référencement SEO</h2>
+        <p>Stratégie SEO performante : optimisation technique, content marketing et suivi analytique pour améliorer votre positionnement.</p>
+        <div class="card-actions justify-end">
+          <a class="btn btn-primary" href="/">En Savoir Plus</a>
+        </div>
+      </div>
     </div>
   </div>
-  <div class="">
-    <div class="">
-      <h2>KORWEB, L'AGENCE DIGITAL qui fait la référence</h2>
-    </div>
-    <div class="">
-      <p>L'agence Korweb basé dans le Var, en région PACA, met à votre service une équipe de professionels de la communication digital et du marketing</p>
-      <p>Spécialiste du design, du développement web, de l'animation graphique et du e-marketing, nous offrons une large gamme de services pour répondre à tous vos besoins</p>
-      <p>Conception graphique, maintenance de vos projet Wordpress, refonte de votre image de marque, création de logiciel sur mesure, nous vous garantissans le meilleurs support pour vos communications</p>
-    </div>
-  </div>
-  <div class="">
-    <div class="">
-    <!--  TODO: ajouter un logo-->
-      <h3>stratégie de communication</h3>
-      <p>Nous développons avec intuition et stratégie tous vos projets de communication. Nous élaborons ensemble votre projet et vous accompagnons à chaque étape de sa réalisation : analyse, idée créative, conception, réalisation et impression</p>
-      <a>En savoir plus</a>
-    </div>
-    <div class="">
-      <!--  TODO: ajouter un logo-->
-      <h3>concept & graphisme</h3>
-      <p>Votre style graphique va s’exprimer à travers la création d’un logo et l’élaboration d’une charte graphique. Garant de l’harmonie de votre image de marque, nous  déclinerons ensuite cette image sur tous les supports de communication nécessaires à votre entreprise.</p>
-      <a>En savoir plus</a>
-    </div>
-    <div class="">
-      <!--  TODO: ajouter un logo-->
-      <h3>SITES INTERNET
-        SUR-MESURE</h3>
-      <p>Des solutions de site Internet vitrine ou de site web marchand sur-mesure pour vous faire bénéficier d’une visibilité et d’une notoriété digitale à l’image de votre entreprise. Nous vous proposons des outils adaptés, performants et une gestion de projet assumée !</p>
-      <a>En savoir plus</a>
-    </div>
-    <div class="">
-      <!--  TODO: ajouter un logo-->
-      <h3>VISIBILITÉ &
-        E-MARKETING</h3>
-      <p>Communiquer ? Oui.
-        Se développer ? Oh que oui !
-        Gefigram propose des solutions e-marketing efficaces pour booster votre image. Nous vous accompagnons tout au long de votre plan de communication pour un impact marketing assuré.</p>
-      <a>En savoir plus</a>
-    </div>
-  </div>
-  <div class="container mx-auto">
-   <!-- Galery apercu création-->
+
+  <div class="container mx-auto my-52">
    <!-- todo: ajouter lien vers la page du projet-->
    <!-- todo: ajouter categorie (vitrine, marchand, etc)-->
-   <h2>Nos créations</h2>
+    <h2 class="text-center text-2xl mb-12 font-bold">Nos Derniers Projets Web Réalisés</h2>
     <div class="grid grid-cols-4 gap-3">
-      <div class="card bg-base-100 w-96 shadow-xl">
-        <figure>
-          <img
-            src="https://img.daisyui.com/images/stock/photo-1606107557195-0e29a4b5b4aa.webp"
-            alt="Shoes" />
-        </figure>
-        <div class="card-body">
-          <h2 class="card-title">Shoes!</h2>
-          <p>If a dog chews shoes whose shoes does he choose?</p>
-          <div class="card-actions justify-end">
-            <button class="btn btn-primary">Buy Now</button>
-          </div>
-        </div>
-      </div>
-      <div class="card bg-base-100 w-96 shadow-xl">
-        <figure>
-          <img
-            src="https://img.daisyui.com/images/stock/photo-1606107557195-0e29a4b5b4aa.webp"
-            alt="Shoes" />
-        </figure>
-        <div class="card-body">
-          <h2 class="card-title">Shoes!</h2>
-          <p>If a dog chews shoes whose shoes does he choose?</p>
-          <div class="card-actions justify-end">
-            <button class="btn btn-primary">Buy Now</button>
-          </div>
-        </div>
-      </div>
-      <div class="card bg-base-100 w-96 shadow-xl">
-        <figure>
-          <img
-            src="https://img.daisyui.com/images/stock/photo-1606107557195-0e29a4b5b4aa.webp"
-            alt="Shoes" />
-        </figure>
-        <div class="card-body">
-          <h2 class="card-title">Shoes!</h2>
-          <p>If a dog chews shoes whose shoes does he choose?</p>
-          <div class="card-actions justify-end">
-            <button class="btn btn-primary">Buy Now</button>
-          </div>
-        </div>
-      </div><div class="card bg-base-100 w-96 shadow-xl">
-      <figure>
-        <img
-          src="https://img.daisyui.com/images/stock/photo-1606107557195-0e29a4b5b4aa.webp"
-          alt="Shoes" />
-      </figure>
-      <div class="card-body">
-        <h2 class="card-title">Shoes!</h2>
-        <p>If a dog chews shoes whose shoes does he choose?</p>
-        <div class="card-actions justify-end">
-          <button class="btn btn-primary">Buy Now</button>
-        </div>
-      </div>
-    </div><div class="card bg-base-100 w-96 shadow-xl">
-      <figure>
-        <img
-          src="https://img.daisyui.com/images/stock/photo-1606107557195-0e29a4b5b4aa.webp"
-          alt="Shoes" />
-      </figure>
-      <div class="card-body">
-        <h2 class="card-title">Shoes!</h2>
-        <p>If a dog chews shoes whose shoes does he choose?</p>
-        <div class="card-actions justify-end">
-          <button class="btn btn-primary">Buy Now</button>
-        </div>
-      </div>
-    </div><div class="card bg-base-100 w-96 shadow-xl">
-      <figure>
-        <img
-          src="https://img.daisyui.com/images/stock/photo-1606107557195-0e29a4b5b4aa.webp"
-          alt="Shoes" />
-      </figure>
-      <div class="card-body">
-        <h2 class="card-title">Shoes!</h2>
-        <p>If a dog chews shoes whose shoes does he choose?</p>
-        <div class="card-actions justify-end">
-          <button class="btn btn-primary">Buy Now</button>
-        </div>
-      </div>
+      {projectData.map(project => (
+        <CardProject
+            title={project.title}
+            img={project.image}
+            describ={project.describ}
+            categorie={project.categorie}
+            link="/"
+            />)
+      )}
     </div>
-      <div class="card bg-base-100 w-96 shadow-xl">
-        <figure>
-          <img
-            src="https://img.daisyui.com/images/stock/photo-1606107557195-0e29a4b5b4aa.webp"
-            alt="Shoes" />
-        </figure>
-        <div class="card-body">
-          <h2 class="card-title">Shoes!</h2>
-          <p>If a dog chews shoes whose shoes does he choose?</p>
-          <div class="card-actions justify-end">
-            <button class="btn btn-primary">Buy Now</button>
-          </div>
-        </div>
-      </div>
-
-      <div class="card bg-base-100 w-96 shadow-xl">
-        <figure>
-          <img
-            src="https://img.daisyui.com/images/stock/photo-1606107557195-0e29a4b5b4aa.webp"
-            alt="Shoes" />
-        </figure>
-        <div class="card-body">
-          <h2 class="card-title">Shoes!</h2>
-          <p>If a dog chews shoes whose shoes does he choose?</p>
-          <div class="card-actions justify-end">
-            <button class="btn btn-primary">Buy Now</button>
-          </div>
-        </div>
-      </div>
-      <div class="card bg-base-100 w-96 shadow-xl">
-        <figure>
-          <img
-            src="https://img.daisyui.com/images/stock/photo-1606107557195-0e29a4b5b4aa.webp"
-            alt="Shoes" />
-        </figure>
-        <div class="card-body">
-          <h2 class="card-title">Shoes!</h2>
-          <p>If a dog chews shoes whose shoes does he choose?</p>
-          <div class="card-actions justify-end">
-            <button class="btn btn-primary">Buy Now</button>
-          </div>
-        </div>
-      </div>
-      <div class="card bg-base-100 w-96 shadow-xl">
-        <figure>
-          <img
-            src="https://img.daisyui.com/images/stock/photo-1606107557195-0e29a4b5b4aa.webp"
-            alt="Shoes" />
-        </figure>
-        <div class="card-body">
-          <h2 class="card-title">Shoes!</h2>
-          <p>If a dog chews shoes whose shoes does he choose?</p>
-          <div class="card-actions justify-end">
-            <button class="btn btn-primary">Buy Now</button>
-          </div>
-        </div>
-      </div>
+    <div class="text-end">
+      <a href="/achievement" class="btn btn-primary">Voir nos créations</a>
     </div>
-    <a class="/">Découvrir nos créations</a>
   </div>
+
+
   <div class="">
     <div class="">
       <h2>Développez votre business,
