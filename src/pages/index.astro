@@ -1,46 +1,54 @@
 ---
 import Layout from '../layouts/Layout.astro';
-import { Image } from 'astro:assets';
+import {Image} from 'astro:assets';
 import hero from '../images/hero.jpg';
 import marketing from '../images/marketing.jpg';
 import design from '../images/design.jpg';
 import dev from '../images/dev.jpg';
 import seo from '../images/seo.jpg';
+import promo from '../images/promo.jpg'
 
 import {projectData} from '../data/ProjectData';
 import CardProject from "../components/CardProject.astro";
+import Commerce from "./commerce.astro";
+import CardComment from "../components/CardComment.astro";
 
-
+import {clientComments} from '../data/ClientComments';
 ---
 
 <Layout>
-  <!--<div class="hero bg-gray-50 min-h-screen">-->
-  <!--  &lt;!&ndash;TODO: fix image qui dépasse en mode mobile&ndash;&gt;-->
-  <!--  <div class="container mx-auto flex flex-col md:flex-row justify-center items-center gap-x-52 ">-->
-  <!--    <div>-->
-  <!--      <h2 class="text-5xl font-bold text-center mb-2">Korweb</h1>-->
-  <!--      <p class="text-xl text-center">Agence Digital Web</p>-->
-  <!--      &lt;!&ndash;TODO: revoir le texte&ndash;&gt;-->
-  <!--      <p class="py-6 text-center">-->
-  <!--        Créons ensemble votre succès digital-->
-  <!--      </p>-->
-  <!--      <div class="text-center">-->
-  <!--        <a href="/contact" class="btn btn-primary">Contactez-nous</a>-->
-  <!--      </div>-->
-  <!--    </div>-->
-  <!--    <Image src={hero} alt="hero" class="rounded-lg shadow-2xl w-32"/>-->
-  <!--  </div>-->
-  <!--</div>-->
+  <div class="hero bg-gray-50 min-h-screen">
+    <!--TODO: fix image qui dépasse en mode mobile-->
+    <div class="container mx-auto flex flex-col md:flex-row justify-center items-center gap-x-52 ">
+      <div>
+        <h2 class="text-5xl font-bold text-center mb-2">Korweb</h1>
+        <p class="text-xl text-center">Agence Digital Web</p>
+        <!--TODO: revoir le texte-->
+        <p class="py-6 text-center">
+          Créons ensemble votre succès digital
+        </p>
+        <div class="text-center">
+          <a href="/contact" class="btn btn-primary">Contactez-nous</a>
+        </div>
+      </div>
+      <Image src={hero} alt="hero" class="rounded-lg shadow-2xl w-32"/>
+    </div>
+  </div>
 
   <div class="container mx-auto flex justify-between my-52 items-center">
     <div class="flex-1 text-center">
       <h1 class="text-2xl mb-2">Agence Web <strong class="font-bold text-blue-500">Korweb</strong></h1>
-        <h2 class="italic">Experts en Solutions Web</h2>
+      <h2 class="italic">Experts en Solutions Web</h2>
     </div>
     <div class="flex-1 text-justify space-y-3">
-      <p>Implantée à <strong>Fréjus</strong> dans le Var (PACA), l'agence <strong>Korweb</strong> conçoit des solutions web personnalisées pour développer votre présence en ligne et optimiser vos processus métier.</p>
-      <p>Notre expertise s'étend de la création de <strong>sites vitrines professionnels</strong>, <strong>solution e-commerce</strong>, au développement de <strong>logiciel sur mesure</strong> afin de répondre au <strong>besoin spécifique</strong> de votre entreprise</p>
-      <p>Chaque projet bénéficie d'un <strong>accompagnement personnalisé</strong>, depuis la conception jusqu'à la mise en ligne, avec un engagement constant sur la <strong>qualité</strong> et le <strong>professionnalisme</strong>.</p>
+      <p>Implantée à <strong>Fréjus</strong> dans le Var (PACA), l'agence <strong>Korweb</strong> conçoit des solutions
+        web personnalisées pour développer votre présence en ligne et optimiser vos processus métier.</p>
+      <p>Notre expertise s'étend de la création de <strong>sites vitrines professionnels</strong>, <strong>solution
+        e-commerce</strong>, au développement de <strong>logiciel sur mesure</strong> afin de répondre au <strong>besoin
+        spécifique</strong> de votre entreprise</p>
+      <p>Chaque projet bénéficie d'un <strong>accompagnement personnalisé</strong>, depuis la conception jusqu'à la mise
+        en ligne, avec un engagement constant sur la <strong>qualité</strong> et le <strong>professionnalisme</strong>.
+      </p>
     </div>
   </div>
 
@@ -99,6 +107,7 @@ import CardProject from "../components/CardProject.astro";
     </div>
   </div>
 
+  <!-- Vitrine projet -->
   <div class="container mx-auto my-52">
    <!-- todo: ajouter lien vers la page du projet-->
    <!-- todo: ajouter categorie (vitrine, marchand, etc)-->
@@ -119,52 +128,65 @@ import CardProject from "../components/CardProject.astro";
     </div>
   </div>
 
-
-  <div class="">
-    <div class="">
-      <h2>Développez votre business,
-        et gagnez en visibilité</h2>
-      <p>L’agence GEFIGRAM, spécialiste en communication visuelle et digitale depuis 2001, vous propose un accompagnement global et des solutions entièrement sur-mesure.
-
-        Nous sommes à vos côtés pour cibler les supports de communication adaptés et vous accompagner dans la conception et la mise en place d’une stratégie de communication efficace.</p>
-    </div>
-    <a href="/">En savoir +</a>
-  </div>
-  <div class="">
-    <h2>Une agence qui s'adapte à votre secteur d'activité</h2>
-  </div>
-<div class="">
-<!--  ajouter une image-->
-  <div class="">
-    <h2>La clé d'une identité visuelle réussie pour votre marque</h2>
-    <p>L'identitité visuelle est un élément essentiel pour toute maque qui souhaite se démarquer et laisser une impression durable sur son public. Une identitié visuelle bien conçue et ..</p>
-    <a href="/">En savoir plus</a>
-  </div>
-</div>
-  <div class="">
-  <!--  Avis client-->
-  <!--  ajouter une galery avec avis client-->
-    <div class="">
-      <div class="">
-      <!--  loho entreprise-->
-      <!--  autheur-->
-      <!--  etoile-->
-      <!--  commentaire user-->
+  <!-- promo -->
+  <div class="container mx-auto my-52">
+    <div class="flex items-center gap-x-14">
+      <div class="flex-1">
+        <h2 class="text-2xl mb-4 font-bold text-center">Développez votre entreprise avec le digital</h2>
+        <h3 class="font-semibold text-xl mb-1">Gagnez en visibilité</h3>
+        <p class="text-justify mb-5">L'agence <strong class="text-blue-500">Korweb</strong>, experte en développement
+          web, vous propose un accompagnement sur-mesure
+          pour améliorer votre présence en ligne. Nous créons des sites web performants et optimisés pour accroître
+          votre visibilité digitale.</p>
+        <h3 class="font-semibold text-xl mb-1">Optimisez vos processus</h3>
+        <p class="mb-10">Notre expertise en développement d'applications sur-mesure vous permet de digitaliser vos
+          processus métiers.
+          Nous concevons des solutions techniques adaptées pour améliorer votre efficacité et votre productivité.</p>
+        <div class="text-end">
+          <a href="/analyse" class="btn btn-primary">En savoir +</a>
+        </div>
+      </div>
+      <div class="flex-1">
+        <Image src={promo} alt="promo" class="rounded-lg shadow-2xl"/>
       </div>
     </div>
   </div>
-  <div class="">
-    <h2>Gefigram l'Agence de communication 360° qui vous conseille dans le Var et en région PACA</h2>
-    <div class="">
-    <p>Vous recherchez une agence de communication pour :
 
-      Réfléchir au développement de votre entreprise ?
-      Bâtir une stratégie de communication durable et efficace ?
-      Redéfinir votre positionnement sur le marché et vos valeurs ?
-      Clarifier vos objectifs et les traduire sur vos supports de communication ?</p>
-      <p>Gefigram est une agence de communication spécialisée dans le conseil stratégique et la création de nouveaux médias : Internet, solutions mobiles, supports papier / print, et supports web…
+  <!-- AVIS CLIENT -->
+  <div class="bg-gray-200 my-52 py-20">
+    <h2 class="text-center font-bold text-2xl uppercase mb-10">L'avis de nos clients</h2>
+    <div class="grid grid-cols-4 gap-6 container mx-auto">
+      {
+        clientComments.map(comment =>
+          <CardComment
+            firstname={comment.firstname}
+            lastname={comment.lastname}
+            message={comment.message}
+            note={comment.note}
+          />)
+      }
+    </div>
 
-        Située dans le Var en région PACA, toute l’équipe de l’agence de communication vous accompagne pour affirmer l’identité de votre marque en apportant la meilleure réponse éditoriale, graphique ou digitale à votre stratégie de communication</p>
+  </div>
+  <!--  Avis client-->
+  <!--  ajouter une galery avec avis client-->
+
+  <div class="my-52 container mx-auto">
+    <h2 class="text-2xl uppercase font-bold text-center mb-8"><strong class="text-blue-500 font-bold ">Korweb</strong>
+      l'Agence digital qui vous conseille dans le Var et en région PACA</h2>
+    <div class="flex gap-x-14 items-center">
+      <div class="flex-1 flex flex-col items-center">
+        <h3 class="mb-2">Nous développons votre projet web selon vos besoins :</h3>
+        <ul class="list-disc pl-6 space-y-1">
+          <li>Augmenter votre visibilité en ligne</li>
+          <li>Optimiser vos processus métiers</li>
+          <li>Digitaliser votre activité</li>
+          <li>Moderniser votre image de marque</li>
+        </ul>
+      </div>
+      <p class="flex-1 text-justify">Basée à Fréjus dans le Var, l'équipe <strong>Korweb</strong> vous accompagne dans votre
+        transformation digitale. Notre expertise en développement web et applicatif vous garantit des solutions
+        techniques adaptées à vos objectifs.</p>
     </div>
   </div>
 </Layout>
