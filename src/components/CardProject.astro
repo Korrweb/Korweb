@@ -1,0 +1,21 @@
+---
+import {IProject} from "../@types/ProjectType";
+
+const { title, img, describ, categorie, link} = Astro.props;
+---
+<div class="card bg-base-100 w-86 shadow-xl">
+  <figure>
+    <img
+      src={img}
+      alt={title} />
+  </figure>
+  <div class="card-body">
+    <h2 class="card-title mx-auto">{title}</h2>
+    <hr>
+    <p>{ describ}</p>
+    <div class="card-actions justify-between items-center">
+      <p class="rounded-md italic">{categorie}</p>
+      <a class="btn btn-neutral" href={link}>Détails</a>
+    </div>
+  </div>
+</div>

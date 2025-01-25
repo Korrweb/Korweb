@@ -1,12 +1,11 @@
 ---
 import '../css/base.css';
-import Header from "../components/Header.astro";
 import Footer from "../components/Footer.astro";
 import HeaderFull from "../components/HeaderFull.astro";
 ---
 
 <!doctype html>
-<html lang="en">
+<html lang="fr">
 	<head>
 		<meta charset="UTF-8" />
 		<meta name="viewport" content="width=device-width" />
@@ -18,7 +17,7 @@ import HeaderFull from "../components/HeaderFull.astro";
 	</head>
 	<body class="flex flex-col min-h-screen">
 		<HeaderFull />
-		<main class="container mx-auto border flex-1">
+		<main class="flex-1">
 			<slot />
 		</main>
 	<Footer />
