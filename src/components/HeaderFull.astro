@@ -1,0 +1,57 @@
+---
+import Logo from "./Logo.astro";
+---
+<div class="navbar bg-base-100">
+  <div class="navbar-start">
+    <Logo />
+  </div>
+  <div class="navbar-center hidden lg:flex">
+    <ul class="menu menu-horizontal px-1">
+      <li><a href="/">Accueil</a></li>
+      <li><a href="/about">L'Agence</a></li>
+      <li>
+        <details>
+          <summary>Nos Services</summary>
+          <ul class="p-2 w-32">
+            <li><a href="/vitrine">Site Vitrine</a></li>
+            <li><a href="/cms">Wordpress</a></li>
+            <li><a href="/blog">Blog</a></li>
+            <li><a href="/ecommerce">Site Marchand</a></li>
+            <li><a href="/mobile">Solution Mobile</a></li>
+            <li><a href="/app">Logiciels sur-mesure</a></li>
+          </ul>
+        </details>
+      </li>
+      <li><a href="/achievement">Réalisations</a></li>
+      <li><a href="/contact">Contacts</a></li>
+    </ul>
+  </div>
+  <div class="navbar-end">
+    <div class="dropdown dropdown-end">
+      <div tabindex="0" role="button" class="btn btn-ghost lg:hidden">
+        <i class="fa-solid fa-bars"></i>
+      </div>
+      <ul
+        tabindex="0"
+        class="menu menu-sm dropdown-content bg-base-100 rounded-box z-[1] mt-3 w-52 p-2 shadow">
+        <li><a href="/">Accueil</a></li>
+        <li><a href="/about">L'Agence</a></li>
+        <li>
+          <details>
+            <summary>Nos Services</summary>
+            <ul class="p-2 w-32">
+              <li><a href="/vitrine">Site Vitrine</a></li>
+              <li><a href="/cms">Wordpress</a></li>
+              <li><a href="/blog">Blog</a></li>
+              <li><a href="/ecommerce">Site Marchand</a></li>
+              <li><a href="/mobile">Solution Mobile</a></li>
+              <li><a href="/app">Logiciels sur-mesure</a></li>
+            </ul>
+          </details>
+        </li>
+        <li><a href="/achievement">Réalisations</a></li>
+        <li><a href="/contact">Contacts</a></li>
+      </ul>
+    </div>
+  </div>
+</div>

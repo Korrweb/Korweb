@@ -1,8 +1,45 @@
-<footer class="flex justify-between py-2.5 px-8 shadow items-center border-t">
-  <p>Copyright &copy; 2025 - Korweb</p>
-  <ul class="flex gap-x-2">
-    <li><a><i class="fa-brands fa-linkedin"></i></a></li>
-    <li><a><i class="fa-brands fa-instagram"></i></a></li>
-    <li><a><i class="fa-brands fa-facebook"></i></a></li>
-  </ul>
+---
+import Logo from "./Logo.astro";
+const date = new Date(Date.now());
+---
+<footer class="footer bg-base-200 text-base-content p-10">
+  <div class="container mx-auto flex justify-between">
+    <nav class="flex flex-col">
+      <!--todo: ajouter les liens-->
+      <!--todo: fix écratement entre les listes en mobile-->
+      <h6 class="footer-title">Services</h6>
+      <a class="link link-hover mb-1" href="/">Site Internet</a>
+      <a class="link link-hover mb-1" href="/">Wordpress</a>
+      <a class="link link-hover mb-1" href="/">Application Mobile</a>
+      <a class="link link-hover mb-1" href="/">Site sur mesure</a>
+    </nav>
+    <nav class="flex flex-col">
+      <h6 class="footer-title">Informations</h6>
+      <a class="link link-hover capitalize mb-1" href="/">à propos</a>
+      <a class="link link-hover mb-1" href="/">Contact</a>
+      <a class="link link-hover mb-1" href="/">Accès</a>
+      <a class="link link-hover mb-1" href="/">Recrutement</a>
+    </nav>
+    <nav class="flex flex-col">
+      <h6 class="footer-title">Légal</h6>
+      <a class="link link-hover mb-1" href="/">Mentions Légales</a>
+      <a class="link link-hover mb-1" href="/">Politique de confidentialité</a>
+      <a class="link link-hover mb-1" href="/">CGU</a>
+      <a class="link link-hover mb-1" href="/">RGPD</a>
+    </nav>
+  </div>
+</footer>
+<footer class="footer bg-base-200 text-base-content border-base-300 border-t px-10 py-4">
+  <aside class="grid-flow-col items-center">
+    <Logo />
+  </aside>
+  <nav class="md:place-self-center md:justify-self-end">
+    <ul class="flex gap-x-3">
+      <!--TODO: ajouter les liens-->
+      <li><a href="/" target="_blank"><i class="fa-brands fa-facebook hover:text-gray-600 text-2xl"></i></a></li>
+      <li><a href="/" target="_blank"><i class="fa-brands fa-linkedin hover:text-gray-600 text-2xl"></i></a></li>
+      <li><a href="/" target="_blank"><i class="fa-brands fa-square-instagram hover:text-gray-600 text-2xl"></i></a></li>
+      <li><a href="/" target="_blank"><i class="fa-brands fa-twitter hover:text-gray-600 text-2xl"></i></a></li>
+    </ul>
+  </nav>
 </footer>
