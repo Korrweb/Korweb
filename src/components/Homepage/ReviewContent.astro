@@ -1,0 +1,18 @@
+---
+import ReviewCard from "../Cards/ReviewCard.astro";
+import {reviewsData} from '../../data/ReviewsData';
+---
+<div class="bg-gray-200 my-52 py-20">
+  <h2 class="text-center font-bold text-2xl uppercase mb-10">L'avis de nos clients</h2>
+  <div class="grid md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6 container mx-auto px-2">
+    {
+      reviewsData.map(review =>
+        <ReviewCard
+          firstname={review.firstname}
+          lastname={review.lastname}
+          message={review.message}
+          note={review.note}
+        />)
+    }
+  </div>
+</div>
