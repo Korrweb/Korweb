@@ -19,6 +19,7 @@ import SkillContent from "../components/homepage/SkillContent.astro";
 import PortefolioContent from "../components/Homepage/PortefolioContent.astro";
 import PromoContent from "../components/Homepage/PromoContent.astro";
 import ReviewContent from "../components/Homepage/ReviewContent.astro";
+import OverviewContent from "../components/Homepage/OverviewContent.astro";
 ---
 
 <Layout>
@@ -28,30 +29,5 @@ import ReviewContent from "../components/Homepage/ReviewContent.astro";
   <PortefolioContent />
   <PromoContent />
   <ReviewContent />
-  <!-- promo -->
-
-
-  <!-- AVIS CLIENT -->
-
-  <!--  Avis client-->
-  <!--  ajouter une galery avec avis client-->
-
-  <div class="my-52 container mx-auto">
-    <h2 class="text-2xl uppercase font-bold text-center mb-8"><strong class="text-blue-500 font-bold ">Korweb</strong>
-      l'Agence digital qui vous conseille dans le Var et en région PACA</h2>
-    <div class="flex gap-x-14 items-center">
-      <div class="flex-1 flex flex-col items-center">
-        <h3 class="mb-2">Nous développons votre projet web selon vos besoins :</h3>
-        <ul class="list-disc pl-6 space-y-1">
-          <li>Augmenter votre visibilité en ligne</li>
-          <li>Optimiser vos processus métiers</li>
-          <li>Digitaliser votre activité</li>
-          <li>Moderniser votre image de marque</li>
-        </ul>
-      </div>
-      <p class="flex-1 text-justify">Basée à Fréjus dans le Var, l'équipe <strong>Korweb</strong> vous accompagne dans votre
-        transformation digitale. Notre expertise en développement web et applicatif vous garantit des solutions
-        techniques adaptées à vos objectifs.</p>
-    </div>
-  </div>
+  <OverviewContent />
 </Layout>
