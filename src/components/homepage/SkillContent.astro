@@ -1,0 +1,28 @@
+---
+import marketing from '../../assets/marketing.jpg';
+import design from '../../assets/design.jpg';
+import dev from '../../assets/dev.jpg';
+import seo from '../../assets/seo.jpg';
+import {skillData} from "../../data/SkillData";
+import CardSkill from "../Cards/CardSkill.astro";
+
+const images = {
+  marketing,
+  design,
+  dev,
+  seo
+};
+---
+
+<div class="grid grid-cols-4 gap-6 container mx-auto">
+  {
+    skillData.map(skill =>
+      <CardSkill
+        image={images[skill.image]}
+        title={skill.title}
+        describ={skill.describ}
+        link={skill.link}
+    />)
+  }
+</div>
+
