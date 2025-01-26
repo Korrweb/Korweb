@@ -1,6 +1,6 @@
-import type {IClientComment} from "../@types/ClientComment.ts";
+import type {IReview} from "../@types/@Reviews.ts";
 
-export const clientComments: IClientComment[] = [
+export const reviewsData: IReview[] = [
   {
     id: 1,
     firstname: "Jean",

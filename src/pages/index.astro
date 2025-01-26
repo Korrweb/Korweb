@@ -10,14 +10,15 @@ import seo from '../assets/seo.jpg';
 import {projectData} from '../data/ProjectData';
 import CardProject from "../components/Cards/CardProject.astro";
 import Commerce from "./commerce.astro";
-import CardComment from "../components/CardComment.astro";
+import ReviewCard from "../components/Cards/ReviewCard.astro";
 
-import {clientComments} from '../data/ClientComments';
+import {reviewsData} from '../data/ReviewsData';
 import Hero from "../components/homepage/Hero.astro";
 import DetailContent from "../components/homepage/DetailContent.astro";
 import SkillContent from "../components/homepage/SkillContent.astro";
 import PortefolioContent from "../components/Homepage/PortefolioContent.astro";
 import PromoContent from "../components/Homepage/PromoContent.astro";
+import ReviewContent from "../components/Homepage/ReviewContent.astro";
 ---
 
 <Layout>
@@ -26,26 +27,12 @@ import PromoContent from "../components/Homepage/PromoContent.astro";
   <SkillContent />
   <PortefolioContent />
   <PromoContent />
-
+  <ReviewContent />
   <!-- promo -->
 
 
   <!-- AVIS CLIENT -->
-  <div class="bg-gray-200 my-52 py-20">
-    <h2 class="text-center font-bold text-2xl uppercase mb-10">L'avis de nos clients</h2>
-    <div class="grid grid-cols-4 gap-6 container mx-auto">
-      {
-        clientComments.map(comment =>
-          <CardComment
-            firstname={comment.firstname}
-            lastname={comment.lastname}
-            message={comment.message}
-            note={comment.note}
-          />)
-      }
-    </div>
 
-  </div>
   <!--  Avis client-->
   <!--  ajouter une galery avec avis client-->
 
