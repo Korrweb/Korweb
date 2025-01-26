@@ -1,0 +1,23 @@
+---
+import CardProject from "../Cards/CardProject.astro";
+import {projectData} from "../../data/ProjectData";
+---
+<div class="container mx-auto my-52">
+  <!-- todo: ajouter lien vers la page du projet-->
+  <!-- todo: ajouter categorie (vitrine, marchand, etc)-->
+  <h2 class="text-center text-2xl mb-12 font-bold">Nos dernières réalisation</h2>
+  <div class="grid md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4  gap-3 px-2 gap-y-4">
+    {projectData.map(project => (
+      <CardProject
+        title={project.title}
+        img={project.image}
+        describ={project.describ}
+        categorie={project.categorie}
+        link="/"
+      />)
+    )}
+  </div>
+  <div class="text-end my-5">
+    <a href="/achievement" class="btn btn-primary">Voir nos créations</a>
+  </div>
+</div>

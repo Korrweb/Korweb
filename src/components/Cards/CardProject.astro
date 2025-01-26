@@ -1,6 +1,5 @@
 ---
-import {IProject} from "../@types/ProjectType";
-
+import {IProject} from "../../@types/ProjectType";
 const { title, img, describ, categorie, link} = Astro.props;
 ---
 <div class="card bg-base-100 w-86 shadow-xl">
@@ -14,7 +13,7 @@ const { title, img, describ, categorie, link} = Astro.props;
     <hr>
     <p>{ describ}</p>
     <div class="card-actions justify-between items-center">
-      <p class="rounded-md italic">{categorie}</p>
+      <p class="rounded-md font-bold text-blue-500">{categorie}</p>
       <a class="btn btn-neutral" href={link}>Détails</a>
     </div>
   </div>

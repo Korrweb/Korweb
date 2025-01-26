@@ -9,7 +9,7 @@ import seo from '../assets/seo.jpg';
 import promo from '../assets/promo.jpg'
 
 import {projectData} from '../data/ProjectData';
-import CardProject from "../components/CardProject.astro";
+import CardProject from "../components/Cards/CardProject.astro";
 import Commerce from "./commerce.astro";
 import CardComment from "../components/CardComment.astro";
 
@@ -17,35 +17,15 @@ import {clientComments} from '../data/ClientComments';
 import Hero from "../components/homepage/Hero.astro";
 import DetailContent from "../components/homepage/DetailContent.astro";
 import SkillContent from "../components/homepage/SkillContent.astro";
+import PortefolioContent from "../components/Homepage/PortefolioContent.astro";
 ---
 
 <Layout>
   <Hero />
   <DetailContent />
   <SkillContent />
+  <PortefolioContent />
 
-
-
-  <!-- Vitrine projet -->
-  <div class="container mx-auto my-52">
-   <!-- todo: ajouter lien vers la page du projet-->
-   <!-- todo: ajouter categorie (vitrine, marchand, etc)-->
-    <h2 class="text-center text-2xl mb-12 font-bold">Nos Derniers Projets Web Réalisés</h2>
-    <div class="grid grid-cols-4 gap-3">
-      {projectData.map(project => (
-        <CardProject
-            title={project.title}
-            img={project.image}
-            describ={project.describ}
-            categorie={project.categorie}
-            link="/"
-            />)
-      )}
-    </div>
-    <div class="text-end">
-      <a href="/achievement" class="btn btn-primary">Voir nos créations</a>
-    </div>
-  </div>
 
   <!-- promo -->
   <div class="container mx-auto my-52">
