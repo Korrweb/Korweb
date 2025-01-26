@@ -1,0 +1,26 @@
+---
+import {Image} from "astro:assets"
+import promo from '../../assets/promo.jpg'
+---
+<div class="container mx-auto my-52">
+  <h2 class="text-2xl mb-4 font-bold text-center">Développez votre entreprise avec le digital</h2>
+  <div class="flex flex-col md:flex-row items-center gap-x-14 ">
+    <div class="flex-1 px-2">
+      <h3 class="font-semibold text-xl mb-1">Gagnez en visibilité</h3>
+      <p class="text-justify mb-5">L'agence <strong class="text-blue-500">Korweb</strong>, experte en développement
+        web, vous propose un accompagnement sur-mesure
+        pour améliorer votre présence en ligne. Nous créons des sites web performants et optimisés pour accroître
+        votre visibilité digitale.</p>
+      <h3 class="font-semibold text-xl mb-1">Optimisez vos processus</h3>
+      <p class="mb-10">Notre expertise en développement d'applications sur-mesure vous permet de digitaliser vos
+        processus métiers.
+        Nous concevons des solutions techniques adaptées pour améliorer votre efficacité et votre productivité.</p>
+      <div class="text-end mb-5">
+        <a href="/analyse" class="btn btn-primary">En savoir +</a>
+      </div>
+    </div>
+    <div class="flex-1 px-2">
+      <Image src={promo} alt="promo" class="rounded-lg shadow-2xl"/>
+    </div>
+  </div>
+</div>

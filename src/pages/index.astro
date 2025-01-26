@@ -6,7 +6,6 @@ import marketing from '../assets/marketing.jpg';
 import design from '../assets/design.jpg';
 import dev from '../assets/dev.jpg';
 import seo from '../assets/seo.jpg';
-import promo from '../assets/promo.jpg'
 
 import {projectData} from '../data/ProjectData';
 import CardProject from "../components/Cards/CardProject.astro";
@@ -18,6 +17,7 @@ import Hero from "../components/homepage/Hero.astro";
 import DetailContent from "../components/homepage/DetailContent.astro";
 import SkillContent from "../components/homepage/SkillContent.astro";
 import PortefolioContent from "../components/Homepage/PortefolioContent.astro";
+import PromoContent from "../components/Homepage/PromoContent.astro";
 ---
 
 <Layout>
@@ -25,31 +25,10 @@ import PortefolioContent from "../components/Homepage/PortefolioContent.astro";
   <DetailContent />
   <SkillContent />
   <PortefolioContent />
-
+  <PromoContent />
 
   <!-- promo -->
-  <div class="container mx-auto my-52">
-    <div class="flex items-center gap-x-14">
-      <div class="flex-1">
-        <h2 class="text-2xl mb-4 font-bold text-center">Développez votre entreprise avec le digital</h2>
-        <h3 class="font-semibold text-xl mb-1">Gagnez en visibilité</h3>
-        <p class="text-justify mb-5">L'agence <strong class="text-blue-500">Korweb</strong>, experte en développement
-          web, vous propose un accompagnement sur-mesure
-          pour améliorer votre présence en ligne. Nous créons des sites web performants et optimisés pour accroître
-          votre visibilité digitale.</p>
-        <h3 class="font-semibold text-xl mb-1">Optimisez vos processus</h3>
-        <p class="mb-10">Notre expertise en développement d'applications sur-mesure vous permet de digitaliser vos
-          processus métiers.
-          Nous concevons des solutions techniques adaptées pour améliorer votre efficacité et votre productivité.</p>
-        <div class="text-end">
-          <a href="/analyse" class="btn btn-primary">En savoir +</a>
-        </div>
-      </div>
-      <div class="flex-1">
-        <Image src={promo} alt="promo" class="rounded-lg shadow-2xl"/>
-      </div>
-    </div>
-  </div>
+
 
   <!-- AVIS CLIENT -->
   <div class="bg-gray-200 my-52 py-20">
