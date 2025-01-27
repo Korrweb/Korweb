@@ -1,0 +1,8 @@
+---
+const { label, name } = Astro.props;
+---
+<!--TODO: ajouter gestion du required-->
+<div class="form-control">
+  <label class="label" for={name}>{ label }</label>
+  <textarea class="textarea textarea-bordered" id={name} name={name}></textarea>
+</div>
